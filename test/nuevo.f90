@@ -26,8 +26,8 @@ contains
 	  !proceso
 	  	do i = 1, N+1, 1	
 	  		w = w + h * func(t,w)
-	  		print*, t, w(1), w(2)
 	  		t = a + i*h
+	  		print*, t, w(1), w(2)
 	  	end do
 	  	
 	end subroutine euler
