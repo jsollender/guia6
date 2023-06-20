@@ -15,7 +15,12 @@ implicit none
   	alfa = (0._wp,0._wp)
 	N = 16
   !llamamos a la subrutina
-  	call euler (a, b, N, alfa, w)
+  	print*,'%%%%% E U L E R %%%%%'
+	call euler (a, b, N, alfa, w)
 	print*,'salió:', w(1), 'y', w(2)
+	
+	print*,'#### R - K   4 ####'
+	call rk4 (a, b, N, alfa, w)
+	print*,'salió:', w(1), 'y',  w(2)
 	
 end program main_test
