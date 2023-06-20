@@ -23,7 +23,7 @@ contains
 	  
 	  !definimos las variables auxiliares
 	  	real(wp)						:: t, h	!ptos. del intervalo y su tamaño
-	  	integer(wp)						:: i
+	  	integer(wp)						:: i	!para el do
 	  
 	  !inicializamos las variables
 	  	t = a
@@ -53,7 +53,7 @@ contains
 	  !definimos las variables auxiliares
 	  	real(wp)					 :: t, h			!ptos. del intervalo y su tamaño
 	  	real(wp), dimension(size(w)) :: k1, k2, k3, k4	!auxiliares
-	  	integer(wp)				 	 :: i
+	  	integer(wp)				 	 :: i				!para el do
 	
 	  !inicializamos las variables
 	  	t = a
