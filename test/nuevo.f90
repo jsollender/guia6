@@ -59,14 +59,17 @@ contains
 	  	t = a
 	  	w = alfa
 	  	h = (b-a)/N	
-	  	k1 = h * func( t , w )
-	  	k2 = h * func( t + h * 0.5_wp , w + k1 * 0.5_wp ) 
-	  	k3 = h * func( t + h * 0.5_wp , w + k2 * 0.5_wp )
-	  	k4 = h * func( t + h , w + k3 )
-
+	  	
 	  !proceso
 	  	do i = 1, N+1, 1
+	  	  !inicializamos los k
+		  	k1 = h * func( t , w )
+		  	k2 = h * func( t + h * 0.5_wp , w + k1 * 0.5_wp ) 
+		  	k3 = h * func( t + h * 0.5_wp , w + k2 * 0.5_wp )
+		  	k4 = h * func( t + h , w + k3 )
+	  		
 	  		w = w + ( k1 + 2._wp * k2 + k3 * 2._wp + k4 )/6._wp
+	  		
 	  		t = a + i*h
 	  		!print de control
 	  		print*, t, w(1), w(2)
